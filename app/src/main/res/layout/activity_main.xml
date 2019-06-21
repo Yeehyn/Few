@@ -17,7 +17,7 @@
             android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Dark"
             app:subtitleTextColor="@color/colorAccent"
-            app:title="Few" />
+            app:title="Technology News" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"

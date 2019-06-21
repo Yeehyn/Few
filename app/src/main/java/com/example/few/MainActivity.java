@@ -1,6 +1,7 @@
 package com.example.few;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,7 +20,11 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerview;
@@ -39,6 +44,10 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
+
+        actionBar.setDisplayHomeAsUpEnabled(true);
+
+        actionBar.setHomeAsUpIndicator(R.drawable.menu);
 
         drawerlayout = findViewById(R.id.drawer_layout);
 
@@ -73,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.share: {
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.setType("text/plain");
-                        String shareBody = "Wish you like it!";
+                        String shareBody = "Wish you like it !";
                         sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
                         startActivity(Intent.createChooser(sharingIntent, "Share via"));

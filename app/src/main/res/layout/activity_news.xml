@@ -11,32 +11,9 @@
         android:id="@+id/logo"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_above="@+id/logo_name"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:contentDescription="news Icon"/>
-
-    <ImageView
-        android:id="@+id/logo_name"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/poweredBy"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="-180px"
-        android:contentDescription="Devloper"/>
-
-    <ImageView
-        android:id="@+id/poweredBy"
-        android:layout_width="400px"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imageView"
-        android:layout_centerHorizontal="true"
-        android:textColor="#FFAB40" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="141dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="-15px"/>
+        android:contentDescription="Icon"
+        android:src="@drawable/icon"/>
 
 </RelativeLayout>

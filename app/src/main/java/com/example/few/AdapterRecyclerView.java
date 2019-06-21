@@ -41,17 +41,17 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
             }
         });
 
-        holder.share.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                sharingIntent.setType("text/plain");
-                String shareBody = "This is shared from Few app";
-                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
-                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
-                v.getContext().startActivity(Intent.createChooser(sharingIntent, "Share via"));
-            }
-        });
+//        holder.share.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+//                sharingIntent.setType("text/plain");
+//                String shareBody = "This is shared from Few app";
+//                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject Here");
+//                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBody);
+//                v.getContext().startActivity(Intent.createChooser(sharingIntent, "Share via"));
+//            }
+//        });
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +79,7 @@ public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerVie
             titleview = itemView.findViewById(R.id.titletextview);
             detailview = itemView.findViewById(R.id.detailtextview);
             explore = itemView.findViewById(R.id.explorebutton);
-            share = itemView.findViewById(R.id.sharebutton);
+//            share = itemView.findViewById(R.id.sharebutton);
             hiddenurl = itemView.findViewById(R.id.hiddenurltextview);
         }
     }

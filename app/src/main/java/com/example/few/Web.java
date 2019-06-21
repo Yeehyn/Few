@@ -26,6 +26,12 @@ public class Web extends AppCompatActivity {
         WebView webview = findViewById(R.id.webView);
         webview.loadUrl(newsUrl);
 
+        webview.getSettings().setSupportZoom(true);
+        webview.getSettings().setBuiltInZoomControls(true);
+        webview.getSettings().setUseWideViewPort(true);
+        webview.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
+        webview.getSettings().setLoadWithOverviewMode(true);
+
         webview.getSettings().setAllowContentAccess(true);
         webview.getSettings().setAllowFileAccess(true);
 

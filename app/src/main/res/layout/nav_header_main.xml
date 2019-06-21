@@ -14,24 +14,16 @@
         android:scaleType="centerCrop" />
 
     <TextView
-        android:id="@+id/headertv1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/headertv2"
-        android:layout_marginLeft="10dp"
-        android:text="Hello!!"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white" />
-
-    <TextView
-        android:id="@+id/headertv2"
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="Reyhan"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:layout_marginBottom="10dp"
+        android:text="Designed by Reyhan"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

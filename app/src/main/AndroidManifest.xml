@@ -26,7 +26,6 @@
         <activity android:name=".Lecture" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Web" />
-        <activity android:name=".More" />
     </application>
 
 </manifest>

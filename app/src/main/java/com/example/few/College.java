@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -20,6 +21,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -32,7 +36,6 @@ public class College extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_college);
-
         rss2 = (ListView) findViewById(R.id.rss2);
 
         title2 = new ArrayList<String>();
@@ -43,8 +46,7 @@ public class College extends AppCompatActivity {
         rss2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView parent, View view, int position, long id) {
-//                Uri uri = Uri.parse(link1.get(position));
-//                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//                String url=String.valueOf(lis.get(position).get("link"));
                 Uri uri = Uri.parse(link2.get(position));
                 String url=uri.toString();
                 Intent intent = new Intent(view.getContext(), Web.class);
@@ -56,13 +58,11 @@ public class College extends AppCompatActivity {
 
     public class ProcessInBackground extends AsyncTask<Integer, Void, String> {
         ProgressDialog progressDialog = new ProgressDialog(College.this);
-        Exception exception = null;
 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-
-            progressDialog.setMessage("稍等");
+            progressDialog.setMessage("请稍候.....");
             progressDialog.show();
         }
 
@@ -122,7 +122,6 @@ public class College extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(College.this, android.R.layout.simple_list_item_1, title2);
             rss2.setAdapter(adapter);
             progressDialog.dismiss();

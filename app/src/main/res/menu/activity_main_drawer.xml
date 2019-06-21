@@ -3,18 +3,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/lecture"
+            android:icon="@drawable/lecture"
             android:title="Lecture" />
         <item
             android:id="@+id/college"
+            android:icon="@drawable/college"
             android:title="College" />
         <item
             android:id="@+id/wechat"
+            android:icon="@drawable/wechat"
             android:title="Wechat" />
         <item
-            android:id="@+id/about"
-            android:title="About" />
-        <item
             android:id="@+id/share"
+            android:icon="@drawable/share"
             android:title="Share" />
     </group>
 </menu>
