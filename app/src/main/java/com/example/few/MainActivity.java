@@ -56,56 +56,40 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 item.setChecked(true);
-
                 drawerlayout.closeDrawers();
 
                 switch (item.getItemId()) {
-
                     case R.id.lecture: {
                         Intent intent = new Intent(MainActivity.super.getBaseContext(),Lecture.class);
                         startActivity(intent);
-                        break;
-                    }
+                        break; }
 
                     case R.id.college: {
                         Intent intent = new Intent(MainActivity.super.getBaseContext(),College.class);
                         startActivity(intent);
-                        break;
-                    }
+                        break; }
 
                     case R.id.wechat: {
                         Intent intent = new Intent(MainActivity.super.getBaseContext(),Wechat.class);
                         startActivity(intent);
-                        break;
-                    }
+                        break; }
 
                     case R.id.share: {
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.setType("text/plain");
-                        String shareBody = "Wish you like it !";
-                        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject Here");
-                        sharingIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
-                        startActivity(Intent.createChooser(sharingIntent, "Share via"));
-                        break;
-                    }
+                        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject :");
+                        sharingIntent.putExtra(Intent.EXTRA_TEXT, "Wish you like UN1 !");
+                        startActivity(Intent.createChooser(sharingIntent, "Via"));
+                        break; }
 
                     default: {
-                        Toast.makeText(getApplicationContext(),item.getTitle(),Toast.LENGTH_SHORT).show();
-                    }
-                }
-                return true;
-            }
-        });
-    }
+                        Toast.makeText(getApplicationContext(),item.getTitle(),Toast.LENGTH_SHORT).show(); } }
+                return true; }}); }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home: {
                 drawerlayout.openDrawer(GravityCompat.START);
-                return true;
-            }
-        }
-        return super.onOptionsItemSelected(item);
-    }
-}
+                return true; } }
+        return super.onOptionsItemSelected(item); }}

@@ -25,14 +25,12 @@ public class ListViewAdapter extends BaseAdapter {
     public ListViewAdapter(Context context,List<Map<String, Object>> data){
         this.context=context;
         this.data=data;
-        this.layoutInflater=LayoutInflater.from(context);
-    }
+        this.layoutInflater=LayoutInflater.from(context); }
 
     public final class Plugin{
         public ImageView image;
         public TextView title;
-        public TextView link;
-    }
+        public TextView link;}
 
     @Override
     public int getCount() {
@@ -58,13 +56,10 @@ public class ListViewAdapter extends BaseAdapter {
             plugin.image=(ImageView)convertView.findViewById(R.id.image);
             plugin.title=(TextView)convertView.findViewById(R.id.title);
             plugin.link=(TextView)convertView.findViewById(R.id.link);
-            convertView.setTag(plugin);
-        }else{
-            plugin=(Plugin)convertView.getTag();
-        }
+            convertView.setTag(plugin); }
+        else{
+            plugin=(Plugin)convertView.getTag(); }
         plugin.image.setBackgroundResource((Integer)data.get(position).get("image"));
         plugin.title.setText((String)data.get(position).get("title"));
         plugin.link.setText((String)data.get(position).get("link"));
-        return convertView;
-    }
-}
+        return convertView; }}

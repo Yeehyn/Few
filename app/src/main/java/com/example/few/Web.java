@@ -51,8 +51,4 @@ public class Web extends AppCompatActivity {
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
                 view.loadUrl(request.getUrl().toString());
-                return false;
-            }
-        });
-    }
-}
+                return false; }}); }}

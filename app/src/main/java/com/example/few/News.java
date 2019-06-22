@@ -30,7 +30,6 @@ public class News extends AppCompatActivity {
         setContentView(R.layout.activity_news);
 
         rq = Volley.newRequestQueue(this);
-
         String url = "https://newsapi.org/v2/top-headlines?country=cn&category=technology&apiKey=cb67547ff7b8438194ac27cdb08cd24d";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
@@ -52,39 +51,18 @@ public class News extends AppCompatActivity {
                         news.setNewsDetail(detail);
                         news.setNewsUrl(newsUrl);
                         news.setContent(content);
-                        newslist.add(news);
-                    }
+                        newslist.add(news); }
                     Intent loadMainActivity = new Intent(News.this, MainActivity.class);
                     startActivity(loadMainActivity);
-                    finish();
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
+                    finish(); }
+                catch (JSONException e) {
+                    e.printStackTrace(); } }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
             }
         });
-        request.setRetryPolicy(new RetryPolicy() {
-            @Override
-            public int getCurrentTimeout() {
-                return 50000;
-            }
-
-            @Override
-            public int getCurrentRetryCount() {
-                return 50000;
-            }
-
-            @Override
-            public void retry(VolleyError error) throws VolleyError {
-
-            }
-        });
         rq.add(request);
     }
-
-
 }
