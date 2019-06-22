@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.share: {
                         Intent sharingIntent = new Intent(Intent.ACTION_SEND);
                         sharingIntent.setType("text/plain");
-                        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject :");
+                        sharingIntent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
                         sharingIntent.putExtra(Intent.EXTRA_TEXT, "Wish you like UN1 !");
                         startActivity(Intent.createChooser(sharingIntent, "Via"));
                         break; }
