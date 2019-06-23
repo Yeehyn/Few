@@ -25,7 +25,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView detailview;
         TextView hiddenurl;
         Button explore;
-//        Button share;
 
         public Holder(View itemView) {
             super(itemView);
@@ -36,11 +35,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
             explore = itemView.findViewById(R.id.explorebutton);
             explore.getPaint().setFlags(Paint. UNDERLINE_TEXT_FLAG);
-            explore.getPaint().setAntiAlias(true);
-
-//            share = itemView.findViewById(R.id.sharebutton);
-        }
-    }
+            explore.getPaint().setAntiAlias(true); }}
 
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -59,24 +54,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 Intent myIntent = new Intent(v.getContext(),Web.class);
                 myIntent.putExtra("newsUrl",News.newslist.get(position).getNewsUrl());
-                v.getContext().startActivity(myIntent);
-            }
-        });
-
-//        holder.share.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-//        sharingIntent.setType("text/plain");
-//                sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Subject：");
-//                sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "This is shared from UN1 app");
-//                v.getContext().startActivity(Intent.createChooser(sharingIntent, "Via"));
-//            }
-//        });
-    }
+                v.getContext().startActivity(myIntent); }}); }
 
     @Override
     public int getItemCount() {
-        return News.newslist.size();
-    }
-}
+        return News.newslist.size(); }}

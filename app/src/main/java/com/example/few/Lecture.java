@@ -35,7 +35,6 @@ public class Lecture extends AppCompatActivity {
         setContentView(R.layout.activity_lecture);
 
         rss1 = (ListView) findViewById(R.id.rss1);
-
         title1 = new ArrayList<String>();
         link1 = new ArrayList<String>();
 
@@ -94,8 +93,6 @@ public class Lecture extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(Lecture.this, android.R.layout.simple_list_item_1, title1);
             rss1.setAdapter(adapter);
-
             progressDialog.dismiss(); }}}

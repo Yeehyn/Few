@@ -44,13 +44,6 @@
             android:layout_width="match_parent"
             android:layout_height="32dp">
 
-            <!--<Button-->
-            <!--android:id="@+id/sharebutton"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="SHARE"-->
-            <!--android:theme="@style/FlatButton"/>-->
-
             <Button
                 android:id="@+id/explorebutton"
                 android:layout_width="343dp"

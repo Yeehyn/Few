@@ -58,7 +58,6 @@ public class Wechat extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-
             progressDialog.setMessage("稍等");
             progressDialog.show(); }
 
@@ -99,7 +98,6 @@ public class Wechat extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(Wechat.this, android.R.layout.simple_list_item_1, title3);
             rss3.setAdapter(adapter);
             progressDialog.dismiss(); }}}

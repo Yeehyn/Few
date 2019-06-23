@@ -38,9 +38,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
-
         actionBar.setDisplayHomeAsUpEnabled(true);
-
         actionBar.setHomeAsUpIndicator(R.drawable.menu);
 
         drawerlayout = findViewById(R.id.drawer_layout);

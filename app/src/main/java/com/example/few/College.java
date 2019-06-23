@@ -37,7 +37,6 @@ public class College extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_college);
         rss2 = (ListView) findViewById(R.id.rss2);
-
         title2 = new ArrayList<String>();
         link2 = new ArrayList<String>();
 
@@ -94,8 +93,6 @@ public class College extends AppCompatActivity {
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
-
             ArrayAdapter<String> adapter = new ArrayAdapter<String>(College.this, android.R.layout.simple_list_item_1, title2);
             rss2.setAdapter(adapter);
-
             progressDialog.dismiss(); }}}

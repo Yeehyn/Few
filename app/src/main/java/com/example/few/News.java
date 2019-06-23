@@ -60,9 +60,5 @@ public class News extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-            }
-        });
-        rq.add(request);
-    }
-}
+                error.printStackTrace(); }});
+        rq.add(request); }}
