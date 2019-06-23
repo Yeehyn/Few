@@ -1,12 +1,10 @@
 package com.example.few;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.WindowDecorActionBar;
 import androidx.core.view.GravityCompat;
 
 import android.view.MenuItem;
@@ -20,11 +18,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView recyclerview;
@@ -39,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerview = findViewById(R.id.recyclerview);
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
-        recyclerview.setAdapter(new AdapterRecyclerView(MainActivity.this) {});
+        recyclerview.setAdapter(new RecyclerViewAdapter(MainActivity.this) {});
 
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

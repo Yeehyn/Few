@@ -13,10 +13,10 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
-public class AdapterRecyclerView extends RecyclerView.Adapter<AdapterRecyclerView.Holder>{
+public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.Holder>{
     private Context context;
 
-    public AdapterRecyclerView(Context context) {
+    public RecyclerViewAdapter(Context context) {
         this.context = context; }
 
     public static class Holder extends RecyclerView.ViewHolder {
